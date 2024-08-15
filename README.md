@@ -6,12 +6,12 @@ This project implements a hardware-based solution to the Travelling Salesperson 
 
 The Travelling Salesperson Problem (TSP) is a classic problem in computer science where a traveler needs to visit a set of cities exactly once and return to the starting point. The objective is to find the optimal order of cities that minimizes the total travel distance. The problem is known to be NP-hard, meaning that no efficient algorithm is known to solve all instances quickly.
 
-This project explores the use of FPGA hardware to solve the TSP by implementing a brute-force approach that takes advantage of the parallel computing capabilities of the FPGA, managed by the FreeRTOS operating system for efficient task scheduling and management.
+This project explores the use of FPGA hardware to solve the TSP by implementing a brute-force (and Branch and Bound) approach that takes advantage of the parallel computing capabilities of the FPGA, managed by the FreeRTOS operating system for efficient task scheduling and management.
 
 ## Project Features
 
 - **FPGA Platform:** Xilinx Zynq-7000 on Digilent Zybo Z7-10
-- **Solution Approach:** Brute-force search using custom hardware IP cores
+- **Solution Approach:** Brute-force search using custom hardware IP cores (alternative Branch and Bound is also provided)
 - **Real-Time OS**: FreeRTOS for task management and scheduling
 - **Performance:** Able to solve TSP for 13 cities in under 3 seconds
 - **Communication:** Interacts with a network server to request and solve TSP scenarios
